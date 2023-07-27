@@ -87,7 +87,7 @@ function CreateOrder() {
 }
 
 export async function action({ request }) {
-  const formData = await request.formData;
+  const formData = await request.formData(); //forgot the breckets here so it mistook it for any data instead of a method
   const data = Object.fromEntries(formData);
 
   const order = {
